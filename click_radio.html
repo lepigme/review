@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+	<meta charset="UTF-8">
+	<title>Click</title>
+	<script src="1.7.2.js"></script>
+</head>
+<body>
+	<div id="main">
+		通过: <input type="radio" name="status" id="pass" value="1"><br>
+		不通过: <input type="radio" name="status" id="no_pass" value="2"><br>
+
+	</div>
+	
+
+</body>
+<script>
+	$(function(){
+
+		$('#pass').click(function() {
+			$('#')
+		});
+
+		$('#no_pass').click(function() {
+			alert($('#no_pass').attr('checked'));
+			if($('#no_pass').attr('checked')) {
+				$('#main').append('<span><label>原因:</label><input type="text" name="comment"></span>');
+			}
+
+
+			
+		});
+		
+		
+	})
+</script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery each遍历</title>
+</head>
+<body>
+	<div id="xxx"></div>
+	<script src="http://cdn.staticfile.org/jquery/1.8.3/jquery.min.js"></script>
+	<script>
+		var tbody = "";
+		var objson = {"name":"鹏", "sex":1, "Email":"lepig@qq.com"};
+		console.log(objson)
+		var r = eval(objson);
+		console.log(r)
+
+		var obj = [{ "name": "项海军", "password": "123456"}, {"name":"曹大鹏", "password":"654321"}];
+		console.log(obj)
+		$.each(obj, function(i, v) {
+			 /* iterate through array or object */
+			 console.log(i + ' ' + v);
+			 var tmp = "";
+			 var trs = "";
+			 trs += "<tr><td>" + v.name + "</td>" + "<td>" + v.password + "</td></tr>";
+			 tbody += trs;
+		});
+
+	$("#xxx").append(tbody)
+	</script>
+</body>
+</html>

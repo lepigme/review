@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="http://cdn.staticfile.org/jquery/1.8.3/jquery.min.js"></script>
+	<script>
+		// var arr1 = [1,2,3,4,5,6,7];
+		// var arr2 = new Array('a', 'b', 'c');
+		// var arr3 = new Array();
+		// 	arr3["A"] = 1;
+		// 	arr3['B'] = 2;
+		// var arr4 = {"AA":11, "BB":22, "CC":33};
+
+		// console.log(arr1);
+		// console.log(arr2);
+		// console.log(arr3);
+		// console.log(arr4);
+		
+		var lepig = {};
+			lepig.name = '樂猪';
+			lepig.sex  = 1;
+			lepig.say = function() {
+				return "Hello World";
+			}
+			lepig.contact = {
+				"tel":"15955125519",
+				"QQ":719836150,
+				"Email":"lepig@qq.com",
+			}
+			lepig.info = [1,2,3,4,5];
+		var tmp = "";
+		for (val in lepig) //val是属性名、或者方法名
+		{
+			tmp += val + ":" + lepig[val] + "\n";
+		}
+		alert(tmp);
+	</script>
+	<script>
+		function checkNum(str) {
+			var charObj = {};
+			for (i=0, len=str.length;i<len;i++) { //拿到每个字符的数量
+				if (charObj[str[i]]) {
+					charObj[str[i]]++;
+				} else {
+					charObj[str[i]] = 1;
+				};
+			}
+			var strTmp = "";
+			for (val in charObj) {
+				strTmp += '"' + val + '"的个数:' +charObj[val] + "\r\n";
+			}
+			return strTmp;
+		}
+		alert(checkNum('abcdefgg'));
+	</script>
+</body>
+</html>

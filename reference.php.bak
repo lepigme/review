@@ -1,0 +1,12 @@
+<?php
+class reference
+{
+	private $value = 100;
+	function getValue() {
+		return $this->value;
+	}
+}
+
+$obj = new reference();
+echo $obj->getValue();
+?>
